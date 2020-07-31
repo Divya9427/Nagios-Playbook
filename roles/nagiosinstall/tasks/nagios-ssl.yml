@@ -42,13 +42,13 @@
 # Making nagios executable init.d
 
   - name: Nagios executable init.d
-    sudo: true
+    become: true
     shell: "chmod +x /etc/init.d/nagios"
 
 #Restart Nagios
 
   - name: restart nagios
-    sudo: true
+    become: true
     shell: "/etc/init.d/nagios restart"
 
 #Restart apache2
