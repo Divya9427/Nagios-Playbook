@@ -70,10 +70,10 @@
 
 #restart apache2
   - name: restart apache
-    sudo: true
+    become: true
     service: name=apache2 state=restarted
 
 #restart nagios
   - name: restart nagios
-    sudo: true
+    become: true
     service: name=nagios state=restarted enabled=yes
