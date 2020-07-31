@@ -27,9 +27,9 @@
   c_name: US
   state: California
   locality: Cupertino
-  org_name: Apple
+  org_name: bannana
   org_unit: IT
-  common_name: 10.68.1.252
+  common_name: myname
   email: abc@xyz.com
   
 # nagios admin password
