@@ -10,13 +10,13 @@
 
 #Configuring nagios plugins
 - name: configure
-  sudo: true
+  become: true
   shell: "./configure --with-nagios-user={{ nagios_username }} --with-nagios-group={{ nagios_group }} chdir=/tmp/nagios-plugins-2.0.3"
 
 - name: make
-  sudo: true
+  become: true
   command: "make all chdir=/tmp/nagios-plugins-2.0.3"
 
 - name: install nagios plugins package
-  sudo: true
+  become: true
   shell: "make install chdir=/tmp/nagios-plugins-2.0.3"
