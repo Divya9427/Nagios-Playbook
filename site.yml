@@ -1,7 +1,7 @@
 ---
 - name: Install Nagios Server
   hosts: nagiosinstall
-  remote_user: pi
+  remote_user: root
   sudo: yes
   roles:
     - nagiosinstall
