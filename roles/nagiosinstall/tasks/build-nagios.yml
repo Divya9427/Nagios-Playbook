@@ -64,7 +64,7 @@
     - make install-init
     - make install-config
     - make install-commandmode
-      #    - make install-webconf
+    - make install-webconf
 
   - name: Enable modules
     apache2_module: state=present name={{ item }}
