@@ -15,4 +15,4 @@
 - include: nagios-ssl.yml
 
 #Build config files for nagios.
-#- include: config-nagios.yml
+- include: config-nagios.yml
