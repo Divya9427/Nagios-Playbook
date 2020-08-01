@@ -46,15 +46,18 @@
 
 # Making nagios executable init.d
 
-  - name: Nagios executable init.d
-    become: true
-    shell: "chmod +x /etc/init.d/nagios"
+#   - name: Nagios executable init.d
+#     become: true
+#     shell: "chmod +x /etc/init.d/nagios"
 
 #Restart Nagios
 
   - name: restart nagios
     become: true
-    shell: "/etc/init.d/nagios restart"
+    shell: "systemctl enable nagios"
+    
+  - name: Starting nagios service
+    shell: "systemctl start nagios"
 
 #Restart apache2
   - name: restart apache2
