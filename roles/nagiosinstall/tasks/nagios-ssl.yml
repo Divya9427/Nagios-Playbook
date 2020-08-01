@@ -38,6 +38,11 @@
 #Reload Apache to make the SSL-enabled website accessible:
   - name: Reload Apache for SSL
     command: service apache2 reload
+    
+  - name: create nagios service file
+    copy:
+       src: nagios.service
+       dest: /etc/systemd/system/nagios.service
 
 # Making nagios executable init.d
 
