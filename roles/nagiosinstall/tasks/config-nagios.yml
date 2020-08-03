@@ -27,13 +27,13 @@
 #Create hostgroup definitions
   - name: creating hostgroup config file
     become: true
-    template: src=hostsgroups.cfg.j2 dest=/usr/local/nagios/etc/servers/hostsgroups.cfg owner={{ nagios_username }} group={{ nagios_group }}
+    template: src=client.itzgeek.local.cfg.j2 dest=/usr/local/nagios/etc/servers/client.itzgeek.local.cfg owner={{ nagios_username }} group={{ nagios_group }}
 
 
 #Create services config file
-  - name: create services config file for nagios
-    become: true
-    template: src=services.cfg.j2 dest=/usr/local/nagios/etc/servers/services.cfg owner={{ nagios_username }} group={{ nagios_group }}
+#   - name: create services config file for nagios
+#     become: true
+#     template: src=services.cfg.j2 dest=/usr/local/nagios/etc/servers/services.cfg owner={{ nagios_username }} group={{ nagios_group }}
 
 
 #Verify nagios config files for any errors
@@ -44,4 +44,4 @@
 #Restart Nagios
   - name: restarting nagios
     become: true
-    command: service nagios restart
+    command: systemctl restart nagios
