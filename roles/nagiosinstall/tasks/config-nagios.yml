@@ -21,7 +21,7 @@
 #Create a command definition
   - name: command definition for nagios object
     become: true
-    template: src=commands.cfg.j2 dest=/usr/local/nagios/etc/servers/commands.cfg owner={{ nagios_username }} group={{ nagios_group }}
+    template: src=commands.cfg.j2 dest=/usr/local/nagios/etc/objects/commands.cfg owner={{ nagios_username }} group={{ nagios_group }}
 
 
 #Create hostgroup definitions
