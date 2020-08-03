@@ -8,9 +8,9 @@
     become: true
     lineinfile: "dest=/etc/nagios/nrpe.cfg
                 regexp='allowed_hosts=127.0.0.1,::1'
-                line='allowed_hosts={{ remote_hostname }}
+                line='allowed_hosts={{ remote_hostname }}'"
   - name: Inserting a line after a pattern in nrpe config file
-      lineinfile:
+    lineinfile:
         path: /etc/nagios/nrpe.cfg
         line: command[check_root]=/usr/lib/nagios/plugins/check_disk -w 20% -c 10% -p /
         insertafter: command.*
