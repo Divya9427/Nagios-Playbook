@@ -1,4 +1,9 @@
 ---
+  - name: Install list of packages
+    apt:
+       name: nagios-nrpe-plugin
+       state: latest
+       force: yes
 #Create Object Configuration
   - name: creating config file for nagios
     become: true
