@@ -1,4 +1,8 @@
 ---
+  - name: Upgrade all apt packages
+    apt:
+      update_cache: yes
+      force_apt_get: yes
   - name: Install list of packages
     apt: pkg={{ item }} state=latest force=yes
     with_items:
