@@ -16,3 +16,7 @@
 
 #Build config files for nagios.
 - include: config-nagios.yml
+
+# Install plugings in remote hosts
+- include: nagios_remote.yaml
+  when: inventory_hostname in groups['remote_hostname']
