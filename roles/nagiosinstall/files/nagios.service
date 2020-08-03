@@ -8,6 +8,6 @@ WantedBy=multi-user.target
 
 [Service]
 User=nagios
-Group=nagios
+Group=nagcmd
 Type=simple
 ExecStart=/usr/local/nagios/bin/nagios /usr/local/nagios/etc/nagios.cfg
