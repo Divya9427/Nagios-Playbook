@@ -53,6 +53,17 @@
     with_items:
     - nagios
     - www-data
+    
+  - name: checking nagios conf file status
+    stat:
+       path: /etc/apache2/sites-enabled/nagios.conf
+    register: nagios_conf
+    
+  - name: remove nagios conf file if exist
+    file:
+       path: /etc/apache2/sites-enabled/nagios.conf
+       state: absent
+    when: nagios_conf.stat.exists == True 
 
 #executing nagios-core-script
   - name: executing commands to install nagios
