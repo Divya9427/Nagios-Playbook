@@ -16,7 +16,7 @@
   nagios_group: nagcmd
   nagios_username: nagios
   apache_path: /etc/apache2/
-  master_hostname: 
+  master_hostname: 35.201.239.22
 
 #apche SSL_directory
   SSL_DIR: /etc/apache2/ssl
